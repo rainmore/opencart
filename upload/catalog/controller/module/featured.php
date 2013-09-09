@@ -1,5 +1,5 @@
 <?php
-class ControllerModuleFeatured extends Controller {
+class ControllerModulefeatured extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/featured'); 
 
@@ -30,6 +30,11 @@ class ControllerModuleFeatured extends Controller {
 				} else {
 					$image = false;
 				}
+				$images = $this->model_catalog_product->getProductImages($product_info['product_id']);
+
+            if(isset($images[0]['image']) && !empty($images[0]['image'])){
+                  $images =$images[0]['image'];
+               }
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
@@ -52,12 +57,13 @@ class ControllerModuleFeatured extends Controller {
 				$this->data['products'][] = array(
 					'product_id' => $product_info['product_id'],
 					'thumb'   	 => $image,
+					'thumb_swap'  => $this->model_tool_image->resize($images, $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height')),
 					'name'    	 => $product_info['name'],
 					'price'   	 => $price,
 					'special' 	 => $special,
 					'rating'     => $rating,
 					'reviews'    => sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']),
-					'href'    	 => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
+					'href'    	 => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
 				);
 			}
 		}

@@ -32,7 +32,6 @@ class ControllerProductSpecial extends Controller {
 		}
 				    	
 		$this->document->setTitle($this->language->get('heading_title'));
-		$this->document->addScript('catalog/view/javascript/jquery/jquery.total-storage.min.js');
 
 		$this->data['breadcrumbs'] = array();
 
@@ -142,7 +141,7 @@ class ControllerProductSpecial extends Controller {
 				'tax'         => $tax,
 				'rating'      => $result['rating'],
 				'reviews'     => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
-				'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+				'href'        => $this->url->link('product/product', $url . '&product_id=' . $result['product_id'])
 			);
 		}
 
@@ -219,21 +218,39 @@ class ControllerProductSpecial extends Controller {
 		if (isset($this->request->get['order'])) {
 			$url .= '&order=' . $this->request->get['order'];
 		}
-									
+						
 		$this->data['limits'] = array();
-
-		$limits = array_unique(array($this->config->get('config_catalog_limit'), 25, 50, 75, 100));
 		
-		sort($limits);
+		$this->data['limits'][] = array(
+			'text'  => $this->config->get('config_catalog_limit'),
+			'value' => $this->config->get('config_catalog_limit'),
+			'href'  => $this->url->link('product/special', $url . '&limit=' . $this->config->get('config_catalog_limit'))
+		);
+					
+		$this->data['limits'][] = array(
+			'text'  => 25,
+			'value' => 25,
+			'href'  => $this->url->link('product/special', $url . '&limit=25')
+		);
+		
+		$this->data['limits'][] = array(
+			'text'  => 50,
+			'value' => 50,
+			'href'  => $this->url->link('product/special', $url . '&limit=50')
+		);
 
-		foreach($limits as $limit){
-			$this->data['limits'][] = array(
-				'text'  => $limit,
-				'value' => $limit,
-				'href'  => $this->url->link('product/special', $url . '&limit=' . $limit)
-			);
-		}
-			
+		$this->data['limits'][] = array(
+			'text'  => 75,
+			'value' => 75,
+			'href'  => $this->url->link('product/special', $url . '&limit=75')
+		);
+		
+		$this->data['limits'][] = array(
+			'text'  => 100,
+			'value' => 100,
+			'href'  => $this->url->link('product/special', $url . '&limit=100')
+		);
+
 		$url = '';
 
 		if (isset($this->request->get['sort'])) {

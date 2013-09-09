@@ -6,7 +6,8 @@ html {
 body {
 	background: #f5f5f5 url('../image/body.jpg');
 	color: #444444;
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	margin: 0px;
 	padding: 0px;
 }
@@ -14,14 +15,16 @@ body, td, th, input, textarea, select, a {
 	font-size: 12px;
 }
 textarea {
-	font-family: arial, sans-serif;
+	/*font-family: arial, sans-serif;*/
+	font-family: arial, 黑体, 微软雅黑, 宋体, sans-serif;
 }
 h1{
 	color: #513847;
 	margin-top: 26px;
 	margin-bottom: 20px;
 	font-size: 20px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400; 
 }
 
@@ -30,7 +33,8 @@ h1{
 	margin-top: 8px;
 	margin-bottom: 12px;
 	font-size: 20px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400;
 }
 .welcome_text {
@@ -48,7 +52,8 @@ h2 {
 	font-size: 17px;
 	margin-top: 16px;
 	margin-bottom: 8px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400; 
 }
 
@@ -68,7 +73,7 @@ a, a:visited, a b {
 }
 a:hover {
 	text-decoration: none;
-	color: #f76d8e;	
+	color: #29ABE2;	
 }
 a:focus, a:active{
 	outline: 0;
@@ -199,7 +204,7 @@ label {
 	font-size: 11px;	
 }
 #language a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 #l_options {
 	webkit-box-shadow: 0px 0px 3px #ddd;
@@ -238,7 +243,7 @@ label {
 	font-size: 11px;
 }
 #currency a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 #c_options {
 	webkit-box-shadow: 0px 0px 3px #ddd;
@@ -440,7 +445,7 @@ label {
 	color: #555;
 }
 #header #welcome a:hover{
-	color: #f76d8e;	
+	color: #29ABE2;	
 }
 
 #header .links {
@@ -463,7 +468,7 @@ label {
 }
 
 #header .links a:hover {
-	color: #f76d8e;	
+	color: #29ABE2;	
 }
 #header .links a + a {
 	margin-left: 8px;
@@ -493,7 +498,7 @@ label {
 	z-index: 133;	
 }
 #menu > ul > li:hover {
-	background: #f76d8e;
+	background: #29ABE2;
 	color: #FFFFFF!important;
 	z-index: 98990;
 }
@@ -514,7 +519,7 @@ label {
 	position: absolute;
 	z-index: 33;
 	background: #FFFFFF;
-	border: 2px #f76d8e solid;
+	border: 2px #29ABE2 solid;
 	margin-top: -1px;
 }
 #menu > ul > li:hover > div {
@@ -538,7 +543,7 @@ label {
 
 #menu > ul > li ul > li > a:hover {
 	background: #FFFFFF;
-	color: #f76d8e!important;
+	color: #29ABE2!important;
 }
 #menu > ul > li > div > ul > li > a {
 	background-image: none;
@@ -691,7 +696,7 @@ table.radio tr.highlight:hover td {
 	font-weight: 400; 	
 }
 .pagination .links a:hover {
-	background: #f76d8e;
+	background: #29ABE2;
 	color: white;
 }
 
@@ -762,7 +767,7 @@ a.button_accent, input.button_accent, .f_form .button{
 	margin-left: 15px;
 }
 .buttons .right .button:hover{
-	background: #f76d8e;
+	background: #29ABE2;
 	color: #FFFFFF;
 }
 
@@ -825,7 +830,8 @@ a.button_accent, input.button_accent, .f_form .button{
 	margin-top: 26px;
 	margin-bottom: 14px;
 	font-size: 17px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
 }
@@ -901,7 +907,8 @@ a.button_accent, input.button_accent, .f_form .button{
 	display: inline-block;
 	color: #444;
 	font-size: 13px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 300;
 	
 	transition: all 0.2s linear;
@@ -916,7 +923,7 @@ a.button_accent, input.button_accent, .f_form .button{
 	font-weight: 600;
 }
 .box-category > ul > li a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 	text-decoration: none;		
 }
 
@@ -930,7 +937,8 @@ a.button_accent, input.button_accent, .f_form .button{
 	display: inline-block;	
 	color: #444;
 	font-size: 13px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 300;
 
 	transition: all 0.2s linear;
@@ -938,7 +946,7 @@ a.button_accent, input.button_accent, .f_form .button{
     -moz-transition: all 0.2s linear;		
 }
 .box-category > ul > li ul > li > a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 	text-decoration: none;	
 }
 .box-category > ul > li ul > li > a.active {
@@ -1036,7 +1044,8 @@ a.button_accent, input.button_accent, .f_form .button{
 .product_holder .name{
 	text-align: center;
 	margin: 6px 12px 16px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 300;	
 }
 .product_holder .price{
@@ -1044,7 +1053,8 @@ a.button_accent, input.button_accent, .f_form .button{
 	margin: 0 0px -5px 10px;
 	font-size: 14px;
 	line-height: 23px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 600;	
 }
 .product_holder .price .price-old{
@@ -1063,7 +1073,7 @@ a.button_accent, input.button_accent, .f_form .button{
 	font-weight:bold;
 }
 .product_holder .name a:hover{
-	color:#f76d8e;
+	color:#29ABE2;
 }
 .product_holder .cart{
 	float: right;
@@ -1218,7 +1228,8 @@ a.button_accent, input.button_accent, .f_form .button{
 .category-list ul li a {
 	color: #444;
 	font-size: 13px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 300;
 	padding: 0px 0px 0px 16px;
 	background: url('../image/arrow_left.png') 0px 4px no-repeat;
@@ -1228,7 +1239,7 @@ a.button_accent, input.button_accent, .f_form .button{
     -moz-transition: all 0.2s linear;
 }
 .category-list ul li a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 
 
@@ -1258,7 +1269,8 @@ a.button_accent, input.button_accent, .f_form .button{
 }
 .manufacturer-list ul li a{
 	font-size: 13px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400;
 }
 /* product */
@@ -1310,7 +1322,7 @@ a.button_accent, input.button_accent, .f_form .button{
 	background: url('../image/grid_view_icon.png') 0px 0px no-repeat;
 }
 .product-filter .display a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 .product-filter .sort {
 	float: right;
@@ -1338,7 +1350,7 @@ a.button_accent, input.button_accent, .f_form .button{
 	background: url('../image/arrow_left.png') 0px 2px no-repeat;
 }
 .product-compare a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 
 
@@ -1449,7 +1461,7 @@ a.button_accent, input.button_accent, .f_form .button{
 }
 
 .product-list .compare a:hover, .product-list .wishlist a:hover{
-	color: #f76d8e;
+	color: #29ABE2;
 }
 
 
@@ -1550,7 +1562,8 @@ h1.pr_name {
 	margin-bottom: 0px;
 	line-height: 20px;
 	font-size: 12px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400;	
 }
 .product-info .description span {
@@ -1561,7 +1574,7 @@ h1.pr_name {
 	text-decoration: none;
 }
 .product-info .description a:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 .product-info .price {
 	overflow: auto;
@@ -1570,7 +1583,8 @@ h1.pr_name {
 	color: #333333;
 	
 	font-size: 19px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 600; 		
 }
 .txt_price {
@@ -1639,7 +1653,7 @@ h1.pr_name {
 	font-size: 14px;
 	color:#3f4a2a;
 	text-transform: uppercase;
-	background: #f76d8e;
+	background: #29ABE2;
 	color: white;	
 }
 
@@ -1680,11 +1694,12 @@ h1.pr_name {
 	padding: 0px 0 0 16px;
 	font-size: 12px;
 	color: #4D4D4D;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400;	
 }
 .product-info a.icon_plus:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 
 .product-info .review {
@@ -1718,7 +1733,7 @@ h1.pr_name {
 	color: #666;
 }
 .product-info .review a.rev_count:hover {
-	color: #f76d8e;
+	color: #29ABE2;
 }
 .tab-content #review .content {
 /* 	color: #555;*/	
@@ -2213,7 +2228,8 @@ h1.pr_name {
 	padding: 0 0 0 20px;
 	background: url('../image/arrow_left.png') 4px 6px no-repeat;
 	font-size: 14px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400; 		
 }
 .sitemap-info .left > ul > li > a, .sitemap-info .right > ul > li > a {
@@ -2223,7 +2239,8 @@ h1.pr_name {
 }
 .sm_info_head {
 	font-size: 14px;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400; 	
 }
 .sitemap-info ul li a:hover {
@@ -2249,7 +2266,8 @@ h1.pr_name {
 	margin-top: 0px;
 	margin-bottom: 12px;
 	text-transform: uppercase;
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 400; 	
 }
 #footer .column {
@@ -2441,7 +2459,8 @@ ZOOM : START
 
 /* This is for the title text. */
 .cloud-zoom-title {
-	font-family:Arial, Helvetica, sans-serif;
+	/*font-family:Arial, Helvetica, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	position:absolute !important;
 	background-color:#444;
 	color:#fff;
@@ -2582,7 +2601,8 @@ ZOOM : END
 	margin-bottom: 12px;
 	font-size: 14px;
 	text-transform: uppercase;	
-	font-family: 'Open Sans', arial, sans-serif;
+	/*font-family: 'Open Sans', arial, sans-serif;*/
+	font-family: 'Open Sans', arial, 黑体, 微软雅黑, 宋体, sans-serif;
 	font-weight: 600; 
 	letter-spacing: 2px;
 	padding-bottom: 6px;
@@ -2590,7 +2610,7 @@ ZOOM : END
 }
 #main_color{
 	color: #fff;
-	background: #f76d8e;
+	background: #29ABE2;
 	border: none;
 	text-transform: uppercase;
 	margin-left: 2px;

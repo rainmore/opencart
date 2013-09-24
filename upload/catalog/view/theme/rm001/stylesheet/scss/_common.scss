@@ -1,0 +1,12 @@
+$mainColor: #525560;
+$blueColor: #004a80;
+$blueColor1: #428bca;
+
+$media-xs: "only screen and (max-width: 767px) ";
+$media-sm-md: "only screen and (min-width: 768px) and (max-width: 991px) ";
+
+@mixin default-font {
+    font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", sans-serif, "黑体", "微软雅黑", "宋体";
+}
+
+

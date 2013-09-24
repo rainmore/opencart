@@ -1,0 +1,127 @@
+body {
+  background: url(../img/cream_pixels.png) repeat;
+  font-size: 12px;
+  color: $mainColor;
+  @include default-font;
+}
+
+#top-container {
+  min-height: 32px;
+  line-height: 32px;
+  background-color: rgba(0,0,0,0.2);
+  font-size: 0.95em;
+  color: #fff;
+
+  a {
+    font-size: 0.95em;
+    color: #fff;
+    &:hover {
+      color: $blueColor1;
+    }
+  }
+
+  #language {
+    span {
+      font-weight: bold;
+      color: $blueColor1;
+    }
+  }
+}
+
+footer {
+  //background: url(../img/carbon_fibre.png) repeat;
+
+
+  #footerUpper {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+
+    h5 {
+      font-size: 1.0em;
+      text-transform: uppercase;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        padding: 2px 0 2px 0;
+        margin: 0;
+        //font-family: 'Open Sans';
+      }
+    }
+
+    a {
+      color: #4d4d4d;
+
+      &:hover {
+        color: $blueColor1;
+        text-decoration: none;
+      }
+    }
+  }
+
+  #powered {
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .social {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .social-icon {
+    float: right;
+    width: 22px;
+    height: 22px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    text-indent: -9999px;
+    margin-left: 12px;
+    background-repeat: no-repeat;
+    background-position: center -22px;
+
+    &:hover {
+      background-position: center top;
+    }
+
+    &.skype {
+      background-image: url('../image/icon_skype.png');
+    }
+
+    &.tweet {
+      background-image: url('../image/icon_tweet.png');
+    }
+
+    &.google {
+      background-image: url('../image/icon_google.png');
+    }
+
+    &.facebook {
+      background-image: url('../image/icon_facebook.png');
+    }
+
+    &.pinterest {
+      background-image: url('../image/icon_pinterest.png');
+    }
+  }
+
+
+  #icon-payment {
+    float: right;
+    width: 319px;
+    height: 38px;
+    background: url('../image/payment.png') center  no-repeat;
+    margin-left: 12px;
+  }
+
+
+}
+
+@import "layout/home";

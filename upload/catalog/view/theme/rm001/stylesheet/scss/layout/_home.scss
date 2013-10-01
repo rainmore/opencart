@@ -1,0 +1,17 @@
+.carousel-indicators {
+
+
+  bottom: 2%;
+  
+  @media #{$media-xs} {
+    bottom: 2%;
+  }
+
+  li {
+    border-color: $blueColor1;
+  }
+
+  .active {
+    background-color: $blueColor1;
+  }
+}

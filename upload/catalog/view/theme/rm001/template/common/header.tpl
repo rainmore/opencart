@@ -19,8 +19,8 @@
 <?php } ?>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/rm001/libs/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="catalog/view/theme/rm001/stylesheet/main.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/rm001/stylesheet/stylesheet.css" />
     <!--
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/rm001/stylesheet/stylesheet.css" />
 
 -->
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/rm001/stylesheet/carousel.css" />
@@ -38,9 +38,11 @@
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 -->
-    <script type="text/javascript" src="catalog/view/theme/rm001/libs/jquery-1.10.2.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
+    <script type="text/javascript" src="catalog/view/theme/rm001/libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/rm001/libs/jquery.flexisel.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/rm001/js/common.js"></script>
 
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
@@ -76,14 +78,14 @@
         <?php echo $cart; ?>
         <div id='header_btm'>
             <div id="search">
+                <form action="/index.php?route=product/search" method="get">
                 <div class="search_inside">
-                    <?php if (!empty($filter_name)) { ?>
-                    <input type="text" name="filter_name" value="<?php echo $filter_name; ?>" placeholder="<?php echo $text_search; ?>" />
-                    <?php } else { ?>
-                    <input type="text" name="filter_name" value="<?php echo $text_search; ?>" placeholder="<?php echo $text_search; ?>" onclick="this.value = '';" onkeydown="this.style.color = '#444444';" />
-                    <?php } ?>
-                    <div class="button-search"></div>
+                    <input type="text" name="search" value="<?php if (!empty($filter_name)) echo $filter_name; ?>" placeholder="<?php echo $text_search; ?>" />
+                    <div class="button-search">
+                        <button class="search" style="border: none; background: none;"></button>
+                    </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -130,6 +132,5 @@
     </div>
 </div>
 <?php endif; ?>
-<div class="container">
 <div id="notification"></div>
 

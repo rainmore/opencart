@@ -5,6 +5,8 @@
 
   @media #{$media-xs} {
     text-align: center;
+    height: 188px;
+    margin-bottom: 0;
   }
 
   #logo {
@@ -36,15 +38,6 @@
       left:0;
       right: 0;
       text-align: center;
-    }
-
-    a{
-      font-size: 11px;
-      color: #555;
-
-      &:hover{
-        color: #29ABE2;
-      }
     }
   }
 
@@ -133,7 +126,14 @@
     top: 33px;
     right: -11px;
     z-index: 1200;
-    min-width: 300px;
+    //min-width: 300px;
+
+    @media #{$media-xs} {
+      position: relative;
+      text-align: center;
+      top: -8px;
+      left: 0px;
+    }
 
     &.active {
       .heading {
@@ -149,14 +149,19 @@
 
     .heading {
       float: right;
-      margin-left: 172px;
       margin-top: 15px;
-      padding-left: 14px;
-      padding-right: 14px;
+      //margin-left: 172px;
+      //padding-left: 14px;
+      //padding-right: 14px;
       border: 1px solid transparent;
       border-bottom: none;
       position: relative;
       z-index: 1;
+
+      @media #{$media-xs} {
+        float: none;
+        margin-left: 0;
+      }
 
       h4 {
         color: #333333;
@@ -180,6 +185,10 @@
           background: url('../image/cart_icon.png') 100% 50% no-repeat;
           padding-right: 35px;
           color: #555;
+
+          @media #{$media-xs} {
+            display: inline-block;
+          }
         }
       }
     }

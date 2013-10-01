@@ -47,7 +47,5 @@
     <?php } else { ?>
     <div class="empty"><?php echo $text_empty; ?></div>
     <?php } ?>
-    
-    <div class="cart-arrow"></div>
   </div>
 </div>

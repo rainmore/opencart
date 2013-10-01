@@ -1,0 +1,226 @@
+
+/* Product listings */
+.product-holder {
+  text-align: center;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+  
+  .product {
+    margin: 0 10px;
+    padding: 15px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+
+    a.name {
+      display: block;
+      margin: 6px 12px 16px;
+      font-weight: 300;
+      color: #4b4b4b;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    a.image {
+      display: block;
+    }
+
+    .info {
+      //@media #{$media-xs} {
+      //  margin-left: 42%;
+      //}
+
+      .price {
+        float: left;
+        margin: 0 0px -5px 10px;
+        font-size: 14px;
+        line-height: 23px;
+
+        //@media #{$media-xs} {
+        //  text-align: left;
+        //  font-weight: bold;
+        //  font-size: 14px;
+        //}
+
+        .old {
+          display: block;
+          margin-top: -10px;
+          font-size: 12px;
+          line-height: 14px;
+          font-weight: normal;
+          color: #bbb;
+          text-decoration: line-through;
+        }
+      }
+
+      .cart {
+        float: right;
+        margin: 0 9px 0 0;
+
+        //@media #{$media-xs} {
+        //  float: left;
+        //  text-align: left;
+        //  margin: 0 12px;
+        //  padding: 10px 0 6px;
+        //}
+      }
+    }
+
+
+  }
+}
+
+.product_holder {
+  text-align: center;
+  display: inline-block;
+  width: 230px;
+  vertical-align: top;
+  margin: 0 15px 15px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: relative;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+
+  @media #{$media-xxs} {
+    width: 370px;
+    margin-right: 0;
+  }
+
+  &:hover {
+    border: 1px solid #ddd;
+
+    .product_holder_inside{
+      border: 2px solid #f7f7f7;
+    }
+  }
+
+  .product_holder_inside{
+    margin: 1px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    border: 2px solid #f7f7f7;
+
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+  }
+}
+
+.product-list {
+  .product_holder {
+    float: none;
+    display: block;
+    margin: 0;
+    width: 100%;
+    overflow: auto;
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+
+    .product_holder_inside{
+      margin: 1px;
+      padding: 0px 15px 0 0;
+      overflow: hidden;
+      border: none;
+    }
+
+    &:hover {
+      border: none;
+      border-bottom: 1px solid #eee;
+
+      .product_holder_inside{
+        border: none;
+      }
+    }
+  }
+
+}
+
+.product-list .right {
+  float: right;
+  text-align: right;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  height: 100px;
+}
+.product-list > div + div {
+  margin: 0px 0 0;
+}
+.product-list .image {
+  float: left;
+  margin: -5px 20px 10px 10px;
+}
+.product-list .image img {
+  margin: 0;
+}
+.product-list .name {
+  margin: 25px 0 10px;
+  text-align: left;
+}
+.product-list .name a {
+  font-size: 17px;
+  font-weight: 400;
+}
+.product-list .description {
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+.product-list .rating {
+  text-align: left;
+  color: #7B7B7B;
+}
+.product-list .price {
+  float: right;
+  height: 120px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.product-list .product_holder .price .price-old{
+  margin-top:0;
+  font-size: 15px;
+}
+.product-list .price-new {
+  display: block;
+}
+.product-list .price-tax {
+  font-size: 12px;
+  font-weight: normal;
+  color: #BBBBBB;
+}
+.product-list .cart{
+  margin: 23px 0 6px;
+  font-weight: bold;
+  padding: 2px 0 6px;
+}
+
+.product-list .wishlist, .product-list .compare {
+  margin: 6px 0 3px;
+}
+.product-list .wishlist a {
+  color: #777;
+  text-decoration: none;
+  background: url('../image/plus_tiny.png') 0px 2px no-repeat;
+  padding: 0px 0 0 16px;
+  font-size: 11px;
+}
+.product-list .compare a {
+  color: #777;
+  text-decoration: none;
+  background: url('../image/plus_tiny.png') 0px 2px no-repeat;
+  padding: 0px 0 0 16px;
+  font-size: 11px;
+}
+.product-list .special_promo {
+  display: none;
+}
+
+.product-list .compare a:hover, .product-list .wishlist a:hover{
+  color: #29ABE2;
+}

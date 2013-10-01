@@ -1,98 +1,144 @@
-<!--<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.jcarousel.min.js"></script>-->
+<div id="latest-slider-container" class="container carousel">
+    <h1 class="general_heading"><span><?php echo $heading_title; ?></span></h1>
+    <ul id="latest-slider" >
+        <?php foreach ($products as $product): ?>
+        <li>
+            <div class='product-holder'>
+                <div class="product">
+                    <div class="special_new"></div>
+                    <?php if ($product['special']) echo '<div class="special_promo1"></div>';?>
+                    <a class="name" href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+                    <a class="image" href="<?php echo $product['href']; ?>">
+                        <?php if ($product['thumb_swap']): ?>
+                        <img oversrc="<?php echo $product['thumb_swap']; ?>" src="<?php echo $product['thumb']; ?>"
+                             title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>"
+                             style="border:none"/>
+                        <?php else: ?>
+                        <img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" style="border:none"/>
+                        <?php endif; ?>
+                    </a>
+                    <div class="info">
+                        <?php if ($product['price']): ?>
+                        <div class="price">
+                            <?php if (!$product['special']): ?>
+                            <?php echo $product['price']; ?>
+                            <?php else: ?>
+                            <span class="old"><?php echo $product['price']; ?></span>
+                            <span class="new"><?php echo $product['special']; ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <?php endif; ?>
+                        <div class="cart">
+                            <a class='button' onclick="addToCart('<?php echo $product['product_id']; ?>');">
+                                <span><?php echo $button_cart; ?></span>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <?php endforeach;?>
+    </ul>
+    <?php if(count($products)>4) : ?>
+    <a href="#" class="prev" id="latest-slider-prev"></a>
+    <a href="#" class="next" id="latest-slider-next"></a>
+    <?php endif; ?>
 
+<script type="text/javascript">
+    function resetVisibleNumber() {
+        var el = $('#latest-slider');
+        var elWidth = el.width();
+        var count = 5;
+        if (elWidth <= 480)
+            count = 1;
+        else if (elWidth <= 779 && elWidth > 480)
+            count = 3;
+        else if (elWidth > 780 && elWidth <= 960)
+            count = 4;
+//        console.log(count);
+//        $('#latest-slider .cycle-slideshow').cycle('carousel-visible', count);
 
-  <h1 class="general_heading"><span><?php echo $heading_title; ?></span>
-    <?php if(count($products)>4){ ?>
-  	<div class="jcarousel_arrows">
-  		<b id="mycarousel_latest-prev" class="custom-prev"></b>
-        <b id="mycarousel_latest-next" class="custom-next"></b>
-    </div>
-    <?php } ?>    
-  </h1>
-  <div class="products_container">
-  <div id="latest_slider" class="jcarousel-custom">
-  <ul class="jcarousel-skin-opencart">
-    <?php foreach ($products as $product) { ?><li><div class='product_holder'>
-		<div class='product_holder_inside'>	
-		 <?php echo '<div class="special_new"></div>'; ?>
-	    <?php if ($product['special']) { ?>
-	    <?php echo '<div class="special_promo1"></div>'; ?>
-	    <?php } ?> 
-	         <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>    
-	       <?php if ($product['thumb_swap']) { ?>
-      <div class="image"><a href="<?php echo $product['href']; ?>"><img oversrc="<?php echo $product['thumb_swap']; ?>" src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" style="border:none"/></a></div>
+    }
 
-          <?php } else {?>
-
-      <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" style="border:none"/></a></div>
-
-      <?php } ?>
-	        <div class="pr_info">
-		 
-		        <?php if ($product['price']) { ?>
-		        <div class="price">
-		          <?php if (!$product['special']) { ?>
-		          <?php echo $product['price']; ?>
-		          <?php } else { ?>
-		          <span class="price-old"><?php echo $product['price']; ?></span> <span class="price-new"><?php echo $product['special']; ?></span>
-		          <?php } ?>
-		        </div>
-		        <?php } ?>
-		        <div class="cart"><a class='button' onclick="addToCart('<?php echo $product['product_id']; ?>');"><span><?php echo $button_cart; ?></span></a></div>
-			</div>
-	   </div>
-	</div></li><?php } ?>
-  </ul>
-</div>
-</div>
-
-<script type="text/javascript"><!--
-
-//function mycarousel_latest_initCallback(carousel) {
-//
-//    $('#mycarousel_latest-next').bind('click', function() {
-//        if(!$(this).hasClass('custom-next_disabled')){
-//        	carousel.next();
-//        }
-//        return false;
+//    $(document).ready(function() {
+//        resetVisibleNumber();
 //    });
 //
-//    $('#mycarousel_latest-prev').bind('click', function() {
-//    	if(!$(this).hasClass('custom-prev_disabled')){
-//        	carousel.prev();
-//    	}
-//        return false;
+//    $(window).resize(function() {
+//        resetVisibleNumber();
 //    });
-//};
+
+    $(window).load(function() {
+        $('#latest-slider').flexisel({
+            visibleItems: 4,
+            animationSpeed: 1000,
+            autoPlay: true,
+            autoPlaySpeed: 3000,
+            pauseOnHover: true,
+            enableResponsiveBreakpoints: true,
+            responsiveBreakpoints: {
+                portrait: {
+                    changePoint:480,
+                    visibleItems: 1
+                },
+                landscape: {
+                    changePoint:640,
+                    visibleItems: 2
+                },
+                tablet: {
+                    changePoint:987,
+                    visibleItems: 3
+                }
+            }
+        });
+//        $("#latest-slider .cycle-slideshow").flexisel();
+//        $("#flexiselDemo2").flexisel({
+//            enableResponsiveBreakpoints: true,
+//            responsiveBreakpoints: {
+//                portrait: {
+//                    changePoint:480,
+//                    visibleItems: 1
+//                },
+//                landscape: {
+//                    changePoint:640,
+//                    visibleItems: 2
+//                },
+//                tablet: {
+//                    changePoint:768,
+//                    visibleItems: 3
+//                }
+//            }
+//        });
 //
-//function lastItemReached_latest(carousel, li_object, index, state_action){
-//	if(index == <?php echo count($products);?>){
-//		$('#mycarousel_latest-next').addClass('custom-next_disabled');
-//	}else {
-//		$('#mycarousel_latest-next').removeClass('custom-next_disabled');
-//	}
-//}
+//        $("#flexiselDemo3").flexisel({
+//            visibleItems: 5,
+//            animationSpeed: 1000,
+//            autoPlay: true,
+//            autoPlaySpeed: 3000,
+//            pauseOnHover: true,
+//            enableResponsiveBreakpoints: true,
+//            responsiveBreakpoints: {
+//                portrait: {
+//                    changePoint:480,
+//                    visibleItems: 1
+//                },
+//                landscape: {
+//                    changePoint:640,
+//                    visibleItems: 2
+//                },
+//                tablet: {
+//                    changePoint:768,
+//                    visibleItems: 3
+//                }
+//            }
+//        });
 //
-//function firstItemReached_latest(carousel, li_object, index, state_action){
-//	if(index == 1){
-//		$('#mycarousel_latest-prev').addClass('custom-prev_disabled');
-//	}else {
-//		$('#mycarousel_latest-prev').removeClass('custom-prev_disabled');
-//	}
-//}
-//
-//$('#latest_slider ul').jcarousel({
-//	scroll: 4,
-//	easing: 'easeInOutExpo',
-//	animation: 800,
-//	initCallback: mycarousel_latest_initCallback,
-//	buttonNextHTML: null,
-//    buttonPrevHTML: null,
-//    itemLastInCallback: {
-//    	  onBeforeAnimation: lastItemReached_latest
-//    },
-//	itemFirstInCallback: {
-//		onBeforeAnimation: firstItemReached_latest
-//	}
-//});
-//--></script>
+//        $("#flexiselDemo4").flexisel({
+//            clone:false
+//        });
+
+    });
+
+</script>
+</div>

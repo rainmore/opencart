@@ -1,4 +1,3 @@
-</div>
 <footer>
     <div id="footer" class="container">
         <div id="footerUpper" class="row">
@@ -55,67 +54,19 @@
         </div>
     </div>
 </footer>
+<a href="#" id="scroll-to-top" style="display:none;"></a>
+
 <script type="text/javascript" src="catalog/view/theme/rm001/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/external/jquery.cookie.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />
 <script type="text/javascript" src="catalog/view/javascript/jquery/tabs.js"></script>
+<script type="text/javascript" src="catalog/view/theme/rm001/js/common.js"></script>
+<!--
 <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
 <script type="text/javascript" src="catalog/view/theme/rm001/js/shoes_custom.js"></script>
+-->
 <script type="text/javascript" src="catalog/view/theme/rm001/js/cloud_zoom.js"></script>
 
-
-<!-- begin scroll to top button //-->
-<script type='text/javascript'>
-    $(function () {
-        $.fn.scrollToTop = function () {
-            $(this).hide().removeAttr("href");
-            if ($(window).scrollTop() != "0") {
-                $(this).fadeIn("slow")
-            }
-            var scrollDiv = $(this);
-            $(window).scroll(function () {
-                if ($(window).scrollTop() == "0") {
-                    $(scrollDiv).fadeOut("slow")
-                } else {
-                    $(scrollDiv).fadeIn("slow")
-                }
-            });
-            $(this).click(function () {
-                $("html, body").animate({
-                    scrollTop: 0
-                }, "slow")
-            })
-        }
-    });
-    $(function () {
-        $("#scroll-to-top").scrollToTop();
-    });
-</script>
-<a href='#' id='scroll-to-top' style='display:none;'></a>
-<!-- end scroll to top button //-->
-
-<!-- begin social icons JQUERY //-->
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#social-icons-jqueryanime li").each(function () {
-            $("a strong", this).css("opacity", "0");
-        });
-        $("#social-icons-jqueryanime li").hover(function () {
-            $(this).stop().fadeTo(500, 1).siblings().stop().fadeTo(500, 0.2);
-            $("a strong", this).stop().animate({
-                opacity: 1,
-                top: "-15px"
-            }, 300);
-        }, function () {
-            $(this).stop().fadeTo(500, 1).siblings().stop().fadeTo(500, 1);
-            $("a strong", this).stop().animate({
-                opacity: 0,
-                top: "-1px"
-            }, 300);
-        });
-    });
-</script>
-<!-- end social icons JQUERY //-->
 </body>
 </html>

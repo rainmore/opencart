@@ -5,6 +5,16 @@ body {
   @include default-font;
 }
 
+h1, h2, h3, h4, h5 {
+  @include default-font;
+}
+
+h1.general_heading {
+  color: #513847;
+  font-size: 20px;
+  line-height: 26px;
+}
+
 #top-container {
   min-height: 32px;
   line-height: 32px;
@@ -125,3 +135,6 @@ footer {
 }
 
 @import "layout/home";
+@import "layout/carousel";
+@import "layout/product";
+@import "layout/cart";

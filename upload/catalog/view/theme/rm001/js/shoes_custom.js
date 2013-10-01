@@ -46,82 +46,82 @@ $(document).ready(function(){
                 easing:"easeOutExpo"});
         }
     );
-
-    positionHeaderLinks();
-
-    $('.cart a').bind('click',function(){
-        positionHeaderLinks();
-    });
-    $('.cart .sm_button').bind('click',function(){
-        positionHeaderLinks();
-    });
-    $('.cart .button').bind('click',function(){
-        positionHeaderLinks();
-    });
-
-
-
-
-    /* Override the Ajax Cart */
-
-    $('#cart > .heading a').die('click');
-    $('#cart').die('mouseleave');
-
-
-
-    $('#cart > .heading a').live('click', function() {
-
-        $('#header #cart .content').slideDown(400);
-        $('#cart').addClass('active');
-
-        $('#cart').load('index.php?route=module/cart #cart > *');
-        $('#cart').live('mouseleave', function() {
-            $('#header #cart .content').slideUp(200, function(){
-                $(this).removeClass('active');
-            });
-        });
-    });
-
-
-    // Fading products
-    $('#content .product_holder').hover(
-        function() {
-            if(typeof(fading_effects) != "undefined" && fading_effects){
-                $(this).siblings().find('img').stop().fadeTo(150, 0.6);
-                $(this).siblings().find('.special_promo').stop().fadeTo(150, 0.6);
-            }
-        },
-        function() {
-            if(typeof(fading_effects) != "undefined" && fading_effects){
-                $(this).siblings().find('img').stop().fadeTo(150, 1);
-                $(this).siblings().find('.special_promo').stop().fadeTo(150, 1);
-            }
-        }
-    );
-
-    $('#content .jcarousel-item').hover(
-        function() {
-            if(typeof(fading_effects) != "undefined" && fading_effects){
-                $(this).siblings().find('img').stop().fadeTo(300, 0.5);
-            }
-        },
-        function() {
-            if(typeof(fading_effects) != "undefined" && fading_effects){
-                $(this).siblings().find('img').stop().fadeTo(300, 1);
-            }
-        }
-    );
-
-    // Sidebar Nav effects
-
-    $('.side_bar_nav a').not(".active").hover(
-        function() {
-            $(this).children('.hover_span').stop().animate({width:'100%'},500,'easeOutExpo');
-        },
-        function() {
-            $(this).children('.hover_span').stop().animate({width:'0'},200,'easeOutExpo');
-        }
-    );
+//
+//    positionHeaderLinks();
+//
+//    $('.cart a').bind('click',function(){
+//        positionHeaderLinks();
+//    });
+//    $('.cart .sm_button').bind('click',function(){
+//        positionHeaderLinks();
+//    });
+//    $('.cart .button').bind('click',function(){
+//        positionHeaderLinks();
+//    });
+//
+//
+//
+//
+//    /* Override the Ajax Cart */
+//
+//    $('#cart > .heading a').off('click');
+//    $('#cart').off('mouseleave');
+//
+//
+//
+//    $('#cart > .heading a').on('click', function() {
+//
+//        $('#header #cart .content').slideDown(400);
+//        $('#cart').addClass('active');
+//
+//        $('#cart').load('index.php?route=module/cart #cart > *');
+//        $('#cart').on('mouseleave', function() {
+//            $('#header #cart .content').slideUp(200, function(){
+//                $(this).removeClass('active');
+//            });
+//        });
+//    });
+//
+//
+//    // Fading products
+//    $('#content .product_holder').hover(
+//        function() {
+//            if(typeof(fading_effects) != "undefined" && fading_effects){
+//                $(this).siblings().find('img').stop().fadeTo(150, 0.6);
+//                $(this).siblings().find('.special_promo').stop().fadeTo(150, 0.6);
+//            }
+//        },
+//        function() {
+//            if(typeof(fading_effects) != "undefined" && fading_effects){
+//                $(this).siblings().find('img').stop().fadeTo(150, 1);
+//                $(this).siblings().find('.special_promo').stop().fadeTo(150, 1);
+//            }
+//        }
+//    );
+//
+//    $('#content .jcarousel-item').hover(
+//        function() {
+//            if(typeof(fading_effects) != "undefined" && fading_effects){
+//                $(this).siblings().find('img').stop().fadeTo(300, 0.5);
+//            }
+//        },
+//        function() {
+//            if(typeof(fading_effects) != "undefined" && fading_effects){
+//                $(this).siblings().find('img').stop().fadeTo(300, 1);
+//            }
+//        }
+//    );
+//
+//    // Sidebar Nav effects
+//
+//    $('.side_bar_nav a').not(".active").hover(
+//        function() {
+//            $(this).children('.hover_span').stop().animate({width:'100%'},500,'easeOutExpo');
+//        },
+//        function() {
+//            $(this).children('.hover_span').stop().animate({width:'0'},200,'easeOutExpo');
+//        }
+//    );
 
 
 });
@@ -279,12 +279,12 @@ $(function(){
 
 
     /* Ajax Cart */
-    $('#cart > .heading a').live('click', function() {
+    $('#cart > .heading a').on('click', function() {
         $('#cart').addClass('active');
 
         $('#cart').load('index.php?route=module/cart #cart > *');
 
-        $('#cart').live('mouseleave', function() {
+        $('#cart').on('mouseleave', function() {
             $(this).removeClass('active');
         });
     });
